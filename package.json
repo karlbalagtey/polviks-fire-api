@@ -1,7 +1,7 @@
 {
     "name": "polviks-fire-api",
     "version": "1.0.0",
-    "engine": {
+    "engines": {
         "node": "12.6.0",
         "npm": "6.9.0"
     },
