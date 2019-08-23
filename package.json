@@ -6,12 +6,8 @@
         "npm": "6.9.0"
     },
     "scripts": {
-        "client": "npm start",
         "server": "nodemon server.js",
-        "build": "npm run build",
-        "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
-        "start": "node server.js",
-        "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+        "start": "node server.js"
     },
     "dependencies": {
         "body-parser": "^1.19.0",
