@@ -1,11 +1,11 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const path = require('path');
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const path = require("path");
 
-if (process.env.NODE_ENV === 'production') require('dotenv').config();
+if (process.env.NODE_ENV === "production") require("dotenv").config();
 
-const stripeRoutes = require('./routes/stripe');
+const stripeRoutes = require("./routes/stripe");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -23,9 +23,9 @@ app.use(cors());
 //     });
 // }
 
-app.use('/payment', stripeRoutes);
+app.use("/payment", stripeRoutes);
 
 app.listen(port, error => {
     if (error) throw error;
-    console.log('Server running on port ' + port);
+    console.log("Server running on port " + port);
 });
